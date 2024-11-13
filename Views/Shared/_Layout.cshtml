@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Supermarket</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-betweeb">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a asp-controller="home" asp-action="index" class="nav-link text-dark">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            @* using tag helper instead of explicit reference *@
+                            @* <a href="/categories/index" class="nav-link text-dark">Categories</a> *@
+                            <a asp-controller="categories" asp-action="index" class="nav-link text-dark">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="products" asp-action="index" class="nav-link text-dark">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="sales" asp-action="index" class="nav-link text-dark">Sell</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container">
+        <div class="pb-3">
+            @RenderSection("title", required: false)
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

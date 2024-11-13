@@ -1,0 +1,8 @@
+@model ProductViewModel
+@section title {
+    <h2>Add Product Page</h2>
+}
+@if (Model != null)
+{
+    <partial name="_Product" model="@Model"></partial>
+}

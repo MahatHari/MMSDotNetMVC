@@ -1,0 +1,60 @@
+@using System.Globalization
+
+@model List<Product>;
+
+
+@section title {
+    <h3>
+        Manage Products
+    </h3>
+}
+<br>
+
+@if (Model != null && Model.Count() > 0)
+{
+
+    <table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Product Category</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantityt</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Category?.Name</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price?.ToString("c", CultureInfo.CreateSpecificCulture("fi-FI"))</td>
+                    <td>@product.Quantity</td>
+                    <td>
+                        <a class="btn btn-link" asp-controller="products" asp-action="edit"
+                            asp-route-id="@product.ProductId">Edit</a>
+                    </td>
+
+                    <td>
+                        <a class="btn btn-link" asp-controller="products" asp-action="delete" asp-route-id="@product.ProductId"
+                            onclick="return confirmDelete()">delete</a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+}
+<div>
+    <a class="btn btn-primary" asp-controller="products" asp-action="add">Add
+    </a>
+</div>
+@section scripts {
+    <script>
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete product ?")
+        }
+    </script>
+}

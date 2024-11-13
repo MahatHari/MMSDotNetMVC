@@ -1,0 +1,21 @@
+@model Product
+@using System.Globalization
+
+@if (Model != null)
+{
+    <div class="form-group">
+    <label asp-for="Name"></label>
+    <input type="text" readonly="readonly" asp-for="Name" class="form-control" />
+</div>
+    <div class="form-group">
+    <label asp-for="Price"></label>
+    <input type="text" class="form-control" readonly="readonly" asp-for="Price"
+        value="@(string.Format(new CultureInfo("fi-FI"),"{0:C}", @Model.Price))">
+</div>
+}
+else
+{
+    <div>
+    <h2>Something went wrong </h2>
+</div>
+}
