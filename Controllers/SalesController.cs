@@ -40,8 +40,9 @@ namespace WebApp.Controllers
                         salesViewModel.QuantityToSell
 
                     );
+
                     prod.Quantity -= salesViewModel.QuantityToSell;
-                    ProductsRepository.UpdateProduct(salesViewModel.SelectedCategoryId, prod);
+                    ProductsRepository.UpdateProduct(salesViewModel.SelectedProductId, prod);
                 }
 
             }

@@ -13,6 +13,7 @@
 /Users/hari.mahat/learning-space/azure-dotnet/WebApp/obj/Debug/net8.0/WebApp.MvcApplicationPartsAssemblyInfo.cache
 /Users/hari.mahat/learning-space/azure-dotnet/WebApp/obj/Debug/net8.0/WebApp.RazorAssemblyInfo.cache
 /Users/hari.mahat/learning-space/azure-dotnet/WebApp/obj/Debug/net8.0/WebApp.RazorAssemblyInfo.cs
+/Users/hari.mahat/learning-space/azure-dotnet/WebApp/obj/Debug/net8.0/WebApp.sourcelink.json
 /Users/hari.mahat/learning-space/azure-dotnet/WebApp/obj/Debug/net8.0/staticwebassets.build.json
 /Users/hari.mahat/learning-space/azure-dotnet/WebApp/obj/Debug/net8.0/staticwebassets.development.json
 /Users/hari.mahat/learning-space/azure-dotnet/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssets.props

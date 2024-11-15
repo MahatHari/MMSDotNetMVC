@@ -11,7 +11,7 @@ namespace WebApp.Models
 
         public int BeforeQty { get; set; }
         public int AfterQty { get; set; }
-        public int SoltQty { get; set; }
+        public int SoldQty { get; set; }
         public string CashierName { get; set; } = "";
 
     }
