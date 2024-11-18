@@ -13,6 +13,7 @@
         "packagesPath": "/Users/hari.mahat/.nuget/packages/",
         "outputPath": "/Users/hari.mahat/learning-space/azure-dotnet/WebApp/obj/",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/Users/hari.mahat/.nuget/NuGet/NuGet.Config"
         ],
